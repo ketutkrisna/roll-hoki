@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MyWebsite</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    
+  </head>
+  
+  <body>
+    <!-- header -->
+    <section class="header" id="header">
+      <div class="container text-center">
+
+        <h1>ROLL HOKI</h1>
+        <div class="hitung" id="hitung">
+          <p id="tulis">putaran ke 30 auto reward</p>
+        </div>
+        <div class="api" id="api"></div>
+
+        <div class="masuk" id="masuknama">
+            <label style="color: gold;">Masukan Nama Anda</label> <br>
+            <span id="span" style="color: gold;"></span><br>
+            <input type="text" id="nama" placeholder="ketik disini"><br>
+            <button id="button" style="margin-top: 20px; font-weight: bold;background-color: #6af;font-size: 22px;box-shadow: 4px 4px 3px black;border-radius: 10px;">Lihat reward</button><br>
+            <button id="back" style="margin-top: 10px; font-weight: bold;background-color: #6af;font-size: 22px;box-shadow: 4px 4px 3px black;border-radius: 10px;">back</button>
+        </div>
+
+        <div class="lihat" id="lihatreward">
+          <h2 id="selamat" style="font-weight: bold; color: gold;margin-top: 3px;"></h2>
+          <div class="foto" id="foto"></div>
+
+          <button id="mainlagi" style="margin-top: 8px;font-weight: bold;background-color: #6af;font-size: 22px;box-shadow: 4px 4px 3px black;border-radius: 10px;">Main lagi</button>
+        </div>
+
+        
+        <div class="bungkus">
+         <div class="bingkai" id="bingkai"><hr>
+           <div class="no1" id="no1">start</div><hr>
+           <div class="no2" id="no2">start</div><hr>
+           <div class="no3" id="no3">start</div><hr>
+         </div>
+         <button id="start">Start</button>
+         <button id="tunggu">Tunggu</button>
+         <button id="lagi">Lagi</button>
+         <button id="reward">Reward</button>
+        </div> 
+
+        <audio id="rell" loop>
+          <source src="audio/rell.wav" type="audio/wav">
+        </audio> 
+
+      </div>
+    </section>
+    <!-- ahir header -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+  </body>
+</html>
