@@ -195,21 +195,21 @@ var i=0;
 					$('#reward').show();
 				}, 7000);
 		}
-		if(hitung==30){
-			setTimeout(function() {
-				$('#no1').html(array[7]);
-			}, 3000);
-			setTimeout(function() {
-				$('#no2').html(array[7]);
-			}, 5000);
-			setTimeout(function() {
-				$('#api').html('<img src="images/api.gif">');
-				$('#no3').html(array[7]);
-				$('#reward').show();
-			}, 7000);
+		// if(hitung==30){
+		// 	setTimeout(function() {
+		// 		$('#no1').html(array[7]);
+		// 	}, 3000);
+		// 	setTimeout(function() {
+		// 		$('#no2').html(array[7]);
+		// 	}, 5000);
+		// 	setTimeout(function() {
+		// 		$('#api').html('<img src="images/api.gif">');
+		// 		$('#no3').html(array[7]);
+		// 		$('#reward').show();
+		// 	}, 7000);
 			
 			
-		}
+		// }
 
 	});
 
