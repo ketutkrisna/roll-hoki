@@ -118,24 +118,24 @@ $(document).ready(function(){
 	
 
 
-var i=0;
+// var i=0;
 
-	$('#no1').click(function(){
+// 	$('#no1').click(function(){
 
-	var awal=new Date().getTime();
-	setInterval(function(){
-		if(new Date().getTime()-awal>4000){
-		clearInterval;
-		return;
-	}
-		$('#no1').html(array[i++]);
-	if(i==array.length){
-		i=0;
-	}
-	},100);	
+// 	var awal=new Date().getTime();
+// 	setInterval(function(){
+// 		if(new Date().getTime()-awal>4000){
+// 		clearInterval;
+// 		return;
+// 	}
+// 		$('#no1').html(array[i++]);
+// 	if(i==array.length){
+// 		i=0;
+// 	}
+// 	},100);	
 	
 		
-	});
+	// });
 	$('#tunggu').hide();
 	var hitung=0;
 	$('#start').click(function(){
@@ -156,11 +156,11 @@ var i=0;
 		setTimeout(function() {
 			$('#no1').removeClass('animasi');
 			$('#no1').html(array[acak1]);
-		}, 3000);
+		}, 2000);
 		setTimeout(function() {
 			$('#no2').removeClass('animasi');
 			$('#no2').html(array[acak2]);
-		}, 5000);
+		}, 3000);
 		setTimeout(function() {
 			// $('#start').hide();
 			$('#rell')[0].pause();
@@ -168,32 +168,32 @@ var i=0;
 			$('#no3').html(array[acak3]);
 			$('#tunggu').hide();
 			$('#start').text('Lagi');
-		}, 7000);
+		}, 4000);
 
 		if(acak1==0 && acak2==0 && acak3==0){
 			setTimeout(function() {
 				$('#api').html('<img src="images/api.gif">');
 				$('#reward').show();
 				
-			}, 7000);
+			}, 4000);
 		}
 		if(acak1==1 && acak2==1 && acak3==1){
 			setTimeout(function() {
 				$('#api').html('<img src="images/api.gif">');
 				$('#reward').show();
-			}, 7000);	
+			}, 4000);	
 		}
 		if(acak1==2 && acak2==2 && acak3==2){
 			setTimeout(function() {
 				$('#api').html('<img src="images/api.gif">');
 				$('#reward').show();
-			}, 7000);
+			}, 4000);
 		}
 		if(acak1==3 && acak2==3 && acak3==3){
 				setTimeout(function() {
 					$('#api').html('<img src="images/api.gif">');
 					$('#reward').show();
-				}, 7000);
+				}, 4000);
 		}
 		// if(hitung==30){
 		// 	setTimeout(function() {
