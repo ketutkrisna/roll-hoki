@@ -99,7 +99,7 @@
 // });
 
 var array=['<img src="images/love1.gif">','<img src="images/kamera.gif">','<img src="images/lawah.gif">','<img src="images/pisang.gif">','<img src="images/gift1.gif">','<img src="images/book.gif">','<img src="images/book2.gif">','<img src="images/tangan.gif">'];
-var foto=['<img src="images/r4.jpg">','<img src="images/r8.jpg">','<img src="images/r9.jpg">','<img src="images/r10.jpg">','<img src="images/r11.jpg">','<img src="images/r15.jpg">'];
+var foto=['<img class="fhover" src="images/r4.jpg">','<img class="fhover" src="images/r8.jpg">','<img class="fhover" src="images/r9.jpg">','<img class="fhover" src="images/r10.jpg">','<img class="fhover" src="images/r11.jpg">','<img class="fhover" src="images/r15.jpg">'];
 var time=[3000,4000,5000,6000,7000,8000];
 
 
@@ -133,18 +133,18 @@ $(document).ready(function(){
 // 		i=0;
 // 	}
 // 	},100);	
-	
 		
 	// });
 	$('#tunggu').hide();
 	var hitung=0;
+	var persen =0;
 	$('#start').click(function(){
 		hitung++;
 		// console.log(hitung);
 		$('#tulis').text('Putaran ke-'+hitung);
-		var acak1= Math.round(Math.random()*4);
-		var acak2= Math.round(Math.random()*4);
-		var acak3= Math.round(Math.random()*4);
+		var acak1= Math.round(Math.random()*7);
+		var acak2= Math.round(Math.random()*7);
+		var acak3= Math.round(Math.random()*7);
 		// console.log(acak1);
 		// console.log(acak2);
 		// console.log(acak3);
@@ -170,31 +170,63 @@ $(document).ready(function(){
 			$('#start').text('Lagi');
 		}, 4000);
 
-		if(acak1==0 && acak2==0 && acak3==0){
+		if(acak1 == acak2 || acak1 ==acak3 || acak2 == acak3){
+			persen++
+			var doublepersen=persen*4;
 			setTimeout(function() {
-				$('#api').html('<img src="images/api.gif">');
-				$('#reward').show();
-				
+				$('.persentase').css('width',doublepersen+'%');
+				$('.persentase').text(doublepersen+'%');
 			}, 4000);
+			if(doublepersen >= 100){
+				setTimeout(function() {
+					$('#no1').html(array[7]);
+				}, 2000);
+				setTimeout(function() {
+					$('#no2').html(array[7]);
+				}, 3000);
+				setTimeout(function() {
+					$('#api').html('<img src="images/api.gif">');
+					$('#no3').html(array[7]);
+					$('#reward').show();
+				}, 4000);
+				return false;
+			}
 		}
-		if(acak1==1 && acak2==1 && acak3==1){
-			setTimeout(function() {
-				$('#api').html('<img src="images/api.gif">');
-				$('#reward').show();
-			}, 4000);	
-		}
-		if(acak1==2 && acak2==2 && acak3==2){
-			setTimeout(function() {
-				$('#api').html('<img src="images/api.gif">');
-				$('#reward').show();
-			}, 4000);
-		}
-		if(acak1==3 && acak2==3 && acak3==3){
+		for(var countacak=0 ; countacak < 8 ; countacak++){
+			if(acak1==countacak && acak2==countacak && acak3==countacak){
 				setTimeout(function() {
 					$('#api').html('<img src="images/api.gif">');
 					$('#reward').show();
+					
 				}, 4000);
+			}
 		}
+
+		// if(acak1==0 && acak2==0 && acak3==0){
+		// 	setTimeout(function() {
+		// 		$('#api').html('<img src="images/api.gif">');
+		// 		$('#reward').show();
+				
+		// 	}, 4000);
+		// }
+		// if(acak1==1 && acak2==1 && acak3==1){
+		// 	setTimeout(function() {
+		// 		$('#api').html('<img src="images/api.gif">');
+		// 		$('#reward').show();
+		// 	}, 4000);	
+		// }
+		// if(acak1==2 && acak2==2 && acak3==2){
+		// 	setTimeout(function() {
+		// 		$('#api').html('<img src="images/api.gif">');
+		// 		$('#reward').show();
+		// 	}, 4000);
+		// }
+		// if(acak1==3 && acak2==3 && acak3==3){
+		// 	setTimeout(function() {
+		// 		$('#api').html('<img src="images/api.gif">');
+		// 		$('#reward').show();
+		// 	}, 4000);
+		// }
 		// if(hitung==30){
 		// 	setTimeout(function() {
 		// 		$('#no1').html(array[7]);
