@@ -29,7 +29,7 @@
 
         <h1>ROLL HOKI</h1>
         <div class="hitung" id="hitung">
-          <p id="tulis">Klik start untuk mulai</p>
+          <p id="tulis">Pilih Gender untuk mulai</p>
         </div>
         <div class="api" id="api"></div>
 
@@ -59,10 +59,22 @@
            <div class="no2" id="no2">start</div><hr>
            <div class="no3" id="no3">start</div><hr>
          </div>
-         <button id="start">Start</button>
-         <button id="tunggu">Tunggu</button>
-         <button id="lagi">Lagi</button>
-         <button id="reward">Reward</button>
+         <div class="hidegender" style="display:flex;justify-content:center;margin-top:-20px;">
+         <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01" style="font-size:18px;color:white">Pilih Gender</label>
+          </div>
+          <select class="custom-select gender" id="inputGroupSelect01" style="height:35px;border-radius:20px;box-shadow:3px 3px 5px rgba(0,0,0,.3);width:150px;margin-top:-10px;">
+            <option selected>Pilih...</option>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
+         </div>
+         </div>
+         <button id="start" style="display:none;">Start</button>
+         <button id="tunggu" style="display:none;">Tunggu</button>
+         <button id="lagi" style="display:none;">Lagi</button>
+         <button id="reward" style="display:none;">Reward</button>
         </div> 
 
         <audio id="rell" loop>

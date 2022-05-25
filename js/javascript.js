@@ -99,11 +99,12 @@
 // });
 
 var array=['<img src="images/love1.gif">','<img src="images/kamera.gif">','<img src="images/lawah.gif">','<img src="images/pisang.gif">','<img src="images/gift1.gif">','<img src="images/book.gif">','<img src="images/book2.gif">','<img src="images/tangan.gif">'];
-var foto=['<img class="fhover" src="images/r4.jpg">','<img class="fhover" src="images/r8.jpg">','<img class="fhover" src="images/r9.jpg">','<img class="fhover" src="images/r10.jpg">','<img class="fhover" src="images/r11.jpg">','<img class="fhover" src="images/r15.jpg">'];
+var fotoglaki=['<img class="fhover" src="images/p1.jpg">','<img class="fhover" src="images/p2.jpg">','<img class="fhover" src="images/p3.jpg">','<img class="fhover" src="images/p4.jpg">','<img class="fhover" src="images/p5.jpg">','<img class="fhover" src="images/p6.jpg">','<img class="fhover" src="images/p7.jpg">','<img class="fhover" src="images/p8.jpg">'];
+var fotogcewe=['<img class="fhover" src="images/c1.jpg">','<img class="fhover" src="images/c2.jpg">','<img class="fhover" src="images/c3.jpg">','<img class="fhover" src="images/c4.jpg">','<img class="fhover" src="images/c5.jpg">','<img class="fhover" src="images/c6.jpg">','<img class="fhover" src="images/c7.jpg">','<img class="fhover" src="images/c8.jpg">'];
 var time=[3000,4000,5000,6000,7000,8000];
 
 
-var roll= Math.round(Math.random()*5);
+var roll= Math.round(Math.random()*8);
 var mulai=document.getElementById('mulai');
 var putar=document.getElementById('putar');
 
@@ -307,9 +308,18 @@ $(document).ready(function(){
 		}else{
 			$('#lihatreward').show();
 			$('#selamat').text('Selamat '+$('#nama').val());
-			$('#foto').html(foto[roll]);
+			if($('.gender').val()=='laki-laki'){
+				$('#foto').html(fotoglaki[roll]);
+			}else{
+				$('#foto').html(fotogcewe[roll]);
+			}
 		}
 	});
+
+	$('.gender').on('change',function(){
+		$('.hidegender').hide();
+		$('#start').fadeIn();
+	})
 
 	$('#mainlagi').click(function(){
 		window.location.reload();
