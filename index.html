@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,12 +18,18 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .swiper {
+        width: 600px;
+        height: 300px;
+      }
+    </style>
 
     
     
   </head>
   
-  <body style="">
+  <body>
     <!-- header -->
     <section class="header" id="header">
       <div class="container text-center">
@@ -89,7 +96,36 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
     <script src="js/javascript.js"></script>
+    <!-- <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+        speed: 100,
+        effect: 'coverflow',
+
+        autoplay: {
+          delay: 100,
+        },
+
+        // If we need pagination
+        // pagination: {
+        //   el: '.swiper-pagination',
+        // },
+
+        // Navigation arrows
+        navigation: {
+          uniqueNavElements: false,
+        },
+
+        // // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+      });
+    </script> -->
 
   </body>
 </html>

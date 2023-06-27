@@ -98,7 +98,7 @@
 // 	alert('ahirnya');
 // });
 
-var array=['<img src="images/love1.gif">','<img src="images/kamera.gif">','<img src="images/lawah.gif">','<img src="images/pisang.gif">','<img src="images/gift1.gif">','<img src="images/book.gif">','<img src="images/book2.gif">','<img src="images/tangan.gif">'];
+var array=['<img class="swiper-slide" src="images/love1.gif">','<img class="swiper-slide" src="images/kamera.gif">','<img class="swiper-slide" src="images/lawah.gif">','<img class="swiper-slide" src="images/pisang.gif">','<img class="swiper-slide" src="images/gift1.gif">','<img class="swiper-slide" src="images/book.gif">','<img class="swiper-slide" src="images/book2.gif">','<img class="swiper-slide" src="images/tangan.gif">'];
 var fotoglaki=['<img class="fhover" src="images/p1.jpg">','<img class="fhover" src="images/p2.jpg">','<img class="fhover" src="images/p3.jpg">','<img class="fhover" src="images/p4.jpg">','<img class="fhover" src="images/p5.jpg">','<img class="fhover" src="images/p6.jpg">','<img class="fhover" src="images/p7.jpg">','<img class="fhover" src="images/p8.jpg">'];
 var fotogcewe=['<img class="fhover" src="images/c1.jpg">','<img class="fhover" src="images/c2.jpg">','<img class="fhover" src="images/c3.jpg">','<img class="fhover" src="images/c4.jpg">','<img class="fhover" src="images/c5.jpg">','<img class="fhover" src="images/c6.jpg">','<img class="fhover" src="images/c7.jpg">','<img class="fhover" src="images/c8.jpg">'];
 var time=[3000,4000,5000,6000,7000,8000];
@@ -116,7 +116,10 @@ $(document).ready(function(){
 	var gamb=['love1','kamera','lawah','pisang'];
 
 	
-	
+	// var body = document.querySelector('.swiper-wrapper');
+	// for(var e=0;e<8;e++){
+	// 	$('.swiper-wrapper').append(array[e]);
+	// }
 
 
 // var i=0;
@@ -135,7 +138,8 @@ $(document).ready(function(){
 // 	}
 // 	},100);	
 		
-	// });
+// 	});
+
 	$('#tunggu').hide();
 	var hitung=0;
 	var persen =0;
